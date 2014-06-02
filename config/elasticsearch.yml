@@ -146,7 +146,7 @@ index:
     char_filter:
       ru:
         type: mapping
-        mappings: ["Ё"=>"Е", "ё"=>"е"]
+        mappings: ['Ё=>Е', 'ё=>е']
     analyzer:
       index_ru:
         type: custom
