@@ -151,12 +151,12 @@ index:
       index_ru:
         type: custom
         tokenizer: standard
-        filter: [custom_word_delimiter, lowercase, russian_morphology, english_morphology, stopwords_ru, stop]
+        filter: [stopwords_ru, stop, custom_word_delimiter, lowercase, russian_morphology, english_morphology]
         char_filter: [ru]
       search_ru:
         type: custom
         tokenizer: standard
-        filter: [custom_word_delimiter, lowercase, russian_morphology, english_morphology, stopwords_ru, stop]
+        filter: [stopwords_ru, stop, custom_word_delimiter, lowercase, russian_morphology, english_morphology]
         char_filter: [ru]
     filter:
       stopwords_ru:
