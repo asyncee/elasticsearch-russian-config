@@ -150,7 +150,7 @@ index:
     analyzer:
       index_ru:
         type: custom
-        tokenizer: standard
+        tokenizer: nGram
         filter: [stopwords_ru, stop, custom_word_delimiter, lowercase, russian_morphology, english_morphology]
         char_filter: [ru]
       search_ru:
@@ -158,6 +158,11 @@ index:
         tokenizer: standard
         filter: [stopwords_ru, stop, custom_word_delimiter, lowercase, russian_morphology, english_morphology]
         char_filter: [ru]
+    tokenizer:
+      nGram:
+        type: nGram
+        min_gram: 4
+        max_gram: 20
     filter:
       stopwords_ru:
         type: stop
@@ -168,12 +173,12 @@ index:
         # "PowerShot" ⇒ "Power" "Shot", части одного слова становятся отдельными токенами
         generate_word_parts: true
         generate_number_parts: true  # "500-42" ⇒ "500" "42"
-        catenate_words: false  # "wi-fi" ⇒ "wifi"
+        catenate_words: true  # "wi-fi" ⇒ "wifi"
         catenate_numbers: false  # "500-42" ⇒ "50042"
-        catenate_all: false  # "wi-fi-4000" ⇒ "wifi4000"
+        catenate_all: true  # "wi-fi-4000" ⇒ "wifi4000"
         split_on_case_change: true  # "PowerShot" ⇒ "Power" "Shot"
-        preserve_original: false  # "500-42" ⇒ "500-42" "500" "42"
-        split_on_numerics: true  # "j2se" ⇒ "j" "2" "se"
+        preserve_original: true  # "500-42" ⇒ "500-42" "500" "42"
+        split_on_numerics: false  # "j2se" ⇒ "j" "2" "se"
 
 
 #################################### Paths ####################################
