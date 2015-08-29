@@ -148,12 +148,14 @@ index:
         type: mapping
         mappings: ['Ё=>Е', 'ё=>е']
     analyzer:
-      index_ru:
+      default_index:
+        alias: [index_ru]
         type: custom
         tokenizer: nGram
         filter: [stopwords_ru, stop, custom_word_delimiter, lowercase, russian_morphology, english_morphology]
         char_filter: [ru]
-      search_ru:
+      default_search:
+        alias: [search_ru]
         type: custom
         tokenizer: standard
         filter: [stopwords_ru, stop, custom_word_delimiter, lowercase, russian_morphology, english_morphology]
