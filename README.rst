@@ -6,7 +6,7 @@
 анализаторов и фильтров с вменяемыми настройками по-умолчанию
 (см. config/elasticsearch.yml).
 
-Текущая версия конфигурации актуальна для ``elasticsearch 1.6.0``,
+Текущая версия конфигурации актуальна для ``elasticsearch 1.7.1``,
 но так как elasticsearch.yml практически не изменяется, то
 данная конфигурация с большой долей вероятности будет совместима
 и с более новыми версиями.
@@ -24,9 +24,9 @@
 В текущем репозитории отсутствуют директории bin и lib,
 получить их можно так::
 
-   wget https://download.elastic.co/elasticsearch/elasticsearch/elasticsearch-1.6.0.tar.gz
-   tar xf elasticsearch-1.6.0.tar.gz
-   cd elasticsearch-1.6.0
+   wget https://download.elastic.co/elasticsearch/elasticsearch/elasticsearch-1.7.1.tar.gz
+   tar xf elasticsearch-1.7.1.tar.gz
+   cd elasticsearch-1.7.1
 
 2. Установить плагины:
 
